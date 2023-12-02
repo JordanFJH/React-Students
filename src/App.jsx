@@ -1,13 +1,12 @@
 import { useState } from 'react'
 
+import Students from "./Components/Students";
 
 function App() {
   
 
   return (
-    <div>
-      Testing
-    </div>
+    <Students />
   )
 }
 
