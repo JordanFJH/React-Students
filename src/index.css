@@ -1,0 +1,29 @@
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.student-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    height: 250px;
+    margin: auto;
+}
+
+.selected {
+    background-color: lightgreen;
+}
+
+.student-box h1 {
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+}
