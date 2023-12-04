@@ -23,16 +23,17 @@ export default function Students() {
     function showStudent(student) {
         return (
         <div onClick={() => (showInfo(student))} className="student">
-            <h2 class="font-bold text">{student.name}</h2>
+            <h2 class="font-bold text-2xl">{student.name}</h2>
         </div>
         )
     }
 
 
     return (
-        <>
+        <div className="holder">
             <div className="student-box">
                 <h1 class="text-3xl font-extrabold">Student Handboook</h1>
+                <h5 class="italic mb-2">(Click on student for more info)</h5>
                 <section className="student-info">
                     {data.map(showStudent)}
                 </section>
@@ -40,14 +41,15 @@ export default function Students() {
 
             {selected && 
             <div className="student-specs">
-                <h1>{studentInfo.name}</h1>
-                <h5>(Scroll to continue)</h5>
-                <h2>Student Bio</h2>
+                <h1 class="text-3xl font-extrabold underline">{studentInfo.name}</h1>
+                <h5 class="italic mb-2">(Scroll to continue)</h5>
+                <h2 class="mb-2 text-2xl font-bold">-- Student Bio --</h2>
                 <h3>{studentInfo.bio}</h3>
-                <h2>Scores</h2>
+                <br />
+                <h2 class="mb-2 text-2xl font-bold">-- Scores --</h2>
                 {studentInfo.scores.map((score) => <Score score={score}/>)}
-                <button onClick={closeButton} className="close-button">x</button>
+                <button onClick={closeButton} className="close-button">X</button>
             </div>}
-        </>
+        </div>
     )
 }
