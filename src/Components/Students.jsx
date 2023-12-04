@@ -20,9 +20,9 @@ export default function Students() {
         setSelected(false);
     }
 
-    function showStudent(student) {
+    function showStudent(student, index) {
         return (
-        <div onClick={() => (showInfo(student))} className="student">
+        <div onClick={() => (showInfo(student))} className="student" key={index}>
             <h2 class="font-bold text-2xl">{student.name}</h2>
         </div>
         )
@@ -47,7 +47,7 @@ export default function Students() {
                 <h3>{studentInfo.bio}</h3>
                 <br />
                 <h2 class="mb-2 text-2xl font-bold">-- Scores --</h2>
-                {studentInfo.scores.map((score) => <Score score={score}/>)}
+                {studentInfo.scores.map((score, index) => <Score key={index} score={score}/>)}
                 <button onClick={closeButton} className="close-button">X</button>
             </div>}
         </div>
